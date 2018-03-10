@@ -15,9 +15,7 @@ public class LongestPalindromeSubstring {
   }
 
   private static int palin(String s, int l, int r, Map<String, Integer> cache) {
-    if (StringUtils.isBlank(s))
-      return 0;
-    if (l > r)
+    if (StringUtils.isBlank(s) || l > r)
       return 0;
     if (l == r)
       return 1;
